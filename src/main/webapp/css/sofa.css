@@ -1,0 +1,49 @@
+@charset "UTF-8";
+html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+    }
+
+    img {
+      width: 50%;
+      height: 50%;
+      object-fit: cover; 
+      display: block;
+    }
+    h3 {
+  color: black;
+}
+ div {
+  color: white;
+}
+   h1 {
+  color: white;
+  text-align: center;
+}
+.sofaImg {
+      position: relative;
+      display: inline-block;
+    }
+
+    .description {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: -100px; /* espace entre la description et l'image */
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.75);
+      color: black;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      width: 500px;
+      text-align: center;
+      white-space: normal;
+      background-color: white;
+    }
+
+    .sofaImg:hover .description {
+      display: block;
+    }

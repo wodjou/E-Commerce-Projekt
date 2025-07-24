@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --page-wrapper-width: min(70rem, 96%);
+  --shadow1: 0 0 2px #fff, 0 0 8px #ddd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9fbff;
+}
+
+.page-wrapper {
+  margin-inline: auto;
+  width: var(--page-wrapper-width);
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #af910c !important;
+  font-weight: 500;
+}
+
+/* NavBar */
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: var(--shadow1);
+  margin-bottom: 2rem;
+}
+
+.header-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-inline: auto;
+  width: var(--page-wrapper-width);
+}
+
+.nav-menu-container {
+  display: flex;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-menu-item {
+  list-style: none;
+}
+
+.nav-menu-item-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu-item-link:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-search {
+  display: flex;
+  gap: 0;
+}
+.navbar-search input,
+.navbar-search button {
+  margin: 0;
+}
+
+.button {
+  border-radius: 0.3rem;
+  background-color: rgb(69, 109, 196);
+  color: #fff;
+  outline: none;
+  border-width: 0;
+  padding: 0.4rem 0.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+}
+.button:enabled:hover {
+  cursor: pointer;
+  background-color: rgb(44, 105, 236);
+}
+
+.input-text {
+  border-radius: 0.3rem;
+  color: #000;
+  outline: 1px solid #ddd;
+  border-width: 0;
+  padding: 0.4rem 0.8rem;
+}
+
+/* FOOTER STYLE */
+.footer-container {
+  background-color: #2a3b5b;
+  color: #fff;
+}
+
+.footer-content-wrapper {
+  width: var(--page-wrapper-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 4rem;
+  margin-inline: auto;
+}
+
+.footer-nav {
+  display: flex;
+}
+
+.footer-nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-nav-item {
+  list-style: none;
+}
+
+.footer-nav-item a {
+  color: white;
+}
+
+/* OTHERS */
+.icon {
+  font-size: x-large;
+}
+
+.heading1 {
+  color: rgb(204, 152, 56);
+}
