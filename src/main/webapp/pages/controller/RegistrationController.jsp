@@ -16,9 +16,9 @@
 	String email = request.getParameter("email");
 	String password = request.getParameter("pwd");
 	
-	String dbUrl = "jdbc:postgresql://localhost:5432/E-Commerce";
+	String dbUrl = "jdbc:postgresql://localhost:5435/E-Commerce";
 	String dbUser = "postgres";
-	String pwd = "postgres";
+	String pwd = "Datenbank1.";
 		
 	Connection conn = new DbConnection().etablishConnection(dbUrl, dbUser, pwd);
 	String query = "INSERT INTO users (name, vorname, email, passwort ) VALUES (?, ?, ?, ?)";
