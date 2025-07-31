@@ -1,0 +1,35 @@
+@charset "UTF-8";
+img {
+	width:400px;
+	height:400px;
+}
+
+    
+    body {
+  background-color: black;
+}
+  h1 {
+  color: white;
+  text-align: center;
+}
+html, body {
+      margin: 20;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+    }
+
+    td {
+  text-align: center;        
+  vertical-align: middle;    
+}
+
+td img {
+  display: block;            
+  margin: 0 auto;            
+  max-width: 100%;           
+  height: auto;
+}
+table {
+  margin: 0 auto;
+}

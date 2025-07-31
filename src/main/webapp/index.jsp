@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="pages/controller/LoginController.jsp" method="post">
-		<h1>Willkommen auf unsere Webshop</h1>
+		<h1>Willkommen auf  Webshop</h1>
 		<label>Name</label>
 		 <input class="input-text" type="text" name="nachname" id="name" placeholder="your Name here"> <br>
 		 <label>Password</label>
