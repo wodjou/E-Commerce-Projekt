@@ -6,6 +6,12 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/base.css">
+</head>
 <body>
 
 <span id ="registrationMessage"></span>
@@ -15,12 +21,8 @@
 	String firstname = request.getParameter("firstname");
 	String email = request.getParameter("email");
 	String password = request.getParameter("pwd");
-	
-	String dbUrl = "jdbc:postgresql://localhost:5435/E-Commerce";
-	String dbUser = "postgres";
-	String pwd = "Datenbank1.";
 		
-	Connection conn = new DbConnection().etablishConnection(dbUrl, dbUser, pwd);
+	Connection conn = new DbConnection().etablishConnection();
 	String query = "INSERT INTO users (name, vorname, email, passwort ) VALUES (?, ?, ?, ?)";
 	PreparedStatement preparedStatement = conn.prepareStatement(query);
 	preparedStatement.setString(1, surname);
@@ -39,7 +41,7 @@
 <%
 	if(response.getStatus() == 200){ %>
 		<p style='color: green;'>✅ Success: Thanks for Registration!</p>
-		<input type='button' value='Zum Login' onclick="window.location.href='../../index.jsp'">
+		<button class="button" type="button" onclick="window.location.href='../login.jsp'">Zum Login</button>
 	<%} %>
 
 <%

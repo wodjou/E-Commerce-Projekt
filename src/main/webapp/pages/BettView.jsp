@@ -1,3 +1,7 @@
+<%@ page import="models.Product" %>
+<%@ page import="dao.ProductDao" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,8 +20,21 @@
 <form action="./BettAppl.jsp" method="get">
 <table class="pajemi">
  
+<% ProductDao productDAO = new ProductDao(); %>
+<%List<Product> allBett = new ArrayList<Product>();
+	allBett = productDAO.getAllProducts(); 
+	String pathBett1 = "../images/"+allBett.get(0).getName()+".png"; 
+	String pathBett2 = "../images/"+allBett.get(1).getName()+".png";
+	String pathBett3 = "../images/"+allBett.get(2).getName()+".jpeg";
+	String pathBett4 = "../images/"+allBett.get(3).getName()+".jpeg";
+	String pathBett5 = "../images/"+allBett.get(4).getName()+".jpeg";
+	String pathBett6 = "../images/"+allBett.get(5).getName()+".jpeg";
+	
+
+	%>
+
   <tr>
-    <td><img src="../images/Bett1.png" title="Produktdetails:
+    <td><img src= <%= pathBett1 %> title="Produktdetails:
 - Farbe: Tintenschwarz 
 - Material: Metall
 - Größe: 208 x 91,8 x 86,4 cm (L x B x H)
@@ -25,7 +42,7 @@
 - Bodenfreiheit: 40 cm
 - Gewicht: 14 kg
 - Maximale Belastbarkeit: 230 kg"/></td>
-    <td><img src="../images/Bett2.png" title="Produktdetails:
+    <td><img src=<%= pathBett2 %> title="Produktdetails:
 - Farbe: Grau
 - Material: Schlaumstoff
 - Größe: 197 × 96 × 108 cm (L x B x H)
@@ -38,7 +55,7 @@
 </tr>
     <tr>
    
-    <td><img src="../images/Bett3.jpeg" title="Produktdetails:
+    <td><img src=<%= pathBett3 %> title="Produktdetails:
 - Farbe: Hellrosa
 - Material: Metall
 - Größe: 197 × 96 × 88,5 cm (L x B x H)
@@ -46,7 +63,7 @@
 - Bodenfreiheit: 32 cm
 - Gewicht: 12 kg
 - Max. Belastbarkeit: 180 kg"  />
- <td><img src="../images/Bett4.jpeg" title="Produktsdetails:
+ <td><img src=<%= pathBett4 %> title="Produktsdetails:
 - Farbe: Beige
 - Material: Baumwolle+Holz+Metall
 - Größe: 222x91x109cm (L x B x H)
@@ -56,7 +73,7 @@
 - Max.Belastbarkeit: 150kg"/>
 </tr>
 <tr>
-    <td><img src="../images/bett5'.jpeg" title="Produktsdetails:
+    <td><img src=<%= pathBett5 %> title="Produktsdetails:
  - Farbe: Beige
 - Produktgröße: 205x96x104cm (L x B x H)
 - Kopfteil Höhe: 104cm
@@ -67,7 +84,7 @@
 - Geeignete Matratze: 90x200cm (Matratze nicht dabei)
 - Max. Belastbarkeit: 120kg
 - Nettogewicht: 20kg"/></td>
-    <td><img src="../images/Bett6.jpeg" title="Produktdetails:
+    <td><img src=<%= pathBett6 %> title="Produktdetails:
 - Farbe: Schwarz
 - Material: Holz (90% Sperrholz + 10% MDF), Samtstoff (50% Samt + 35% Vliesstoff + 15% Mesh-Gewebe)
 - Größe: 197 × 96 × 108 cm (L x B x H)

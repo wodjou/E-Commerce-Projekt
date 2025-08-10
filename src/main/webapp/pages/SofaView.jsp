@@ -23,7 +23,7 @@
   <div class="sofaImg">
   <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/0.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa1.jpeg"
           alt="sofa bild "   width= 150
 	height= 150>
 	<main class="product-card-body">
@@ -44,7 +44,7 @@
 	<br>
            <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/1.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa2.jpeg"
           alt="sofa bild "   width= 150
 	height= 150>
 	<main class="product-card-body">
@@ -63,7 +63,7 @@
 	<br>
            <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/2.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa3.jpeg"
           alt="sofa bild "   width= 150
 	height= 150>
 	<main class="product-card-body">
@@ -83,7 +83,7 @@
 	<br>
            <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/3.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa4.jpeg"
           alt="sofa bild "   width= 150
 	height= 150> 
 	
@@ -105,7 +105,7 @@
 	<br>
            <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/4.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa5.jpeg"
           alt="sofa bild "   width= 150
 	height= 150><main class="product-card-body">
             <h3>sofa de luxe</h3>
@@ -126,7 +126,7 @@
 	<br>
            <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/5.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa6.jpeg"
           alt="sofa bild "  width= 150
 	height= 150>
 	<main class="product-card-body">
@@ -146,7 +146,7 @@
 	<br>
            <img
           class="sofa"
-          src="<%= request.getContextPath() %>/images/6.jpeg"
+          src="<%= request.getContextPath() %>/images/Sofa7.jpeg"
           alt="sofa bild "   width= 150
 	height= 150>
 	<main class="product-card-body">

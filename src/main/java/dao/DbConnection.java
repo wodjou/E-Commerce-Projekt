@@ -7,18 +7,21 @@ import java.sql.SQLException;
 public class DbConnection {
 	
 	private String dbUrl;
-	
+	private String user;
+	private String password;
 	
 	public DbConnection() {
-		
+		dbUrl = "jdbc:postgresql://localhost:5432/E-Commerce";
+		user = "postgres";
+		password = "postgres";
 	}
 	
-	public Connection etablishConnection(String dbUrl, String user, String password) {
+	public Connection etablishConnection() {
 		
 		try {
 				
 			Class.forName("org.postgresql.Driver");
-			Connection conn = DriverManager.getConnection(dbUrl, user, password);
+			Connection conn = DriverManager.getConnection(this.dbUrl, this.user, this.password);
 			System.out.println("Successful connected....");
 			return conn;
 			

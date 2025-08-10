@@ -12,21 +12,23 @@ import models.Product;
 public class ProductDao {
 
 	
+	
 	private Connection conn;
-	String dbUrl = "jdbc:postgresql://localhost:5432/E-Commerce";
-	String user = "postgres";
-	String password = "postgres";
 	public ProductDao() {
 		
-		conn = new DbConnection().etablishConnection(dbUrl, user, password);
+		conn = new DbConnection().etablishConnection();
 	
+	}
+	
+	public void deleteTableProduct() {
+		
 	}
 		
 		public List<Product> getAllProducts() {
 			List<Product> productList = new ArrayList<Product>();
 			try {
 				Statement st = conn.createStatement();
-				ResultSet rs = st.executeQuery("SELECT * FROM product");
+				ResultSet rs = st.executeQuery("SELECT* FROM product");
 				
 				while(rs.next()) {
 					int id = rs.getInt("product-id");
