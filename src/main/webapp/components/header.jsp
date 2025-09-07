@@ -25,7 +25,7 @@
         <button class="button" type="submit">Suche <span class="icon">🔎</span></button>
       </form>
       <span>
-        <a href="#">Warenkorb <span class="icon">🛒</span></a>
+        <a href="./WarenkorbView.jsp">Warenkorb <span class="icon">🛒</span></a>
       </span>
     </div>
   </main>
