@@ -16,7 +16,7 @@
 	
 	String sql = "select* from users where name = ?"+" and passwort = ?";
 	System.out.println(sql);
-	Connection conn =  new DbConnection().etablishConnection();
+	Connection conn = new DbConnection().etablishConnection();
 	PreparedStatement st = conn.prepareStatement(sql);
 	st.setString(1, username);
 	st.setString(2, password);

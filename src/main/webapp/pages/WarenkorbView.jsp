@@ -1,5 +1,7 @@
 <%@ page import="models.Product" %>
 <%@ page import="models.Warenkorb" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,15 +13,27 @@
 <body>
 <jsp:useBean id="warenkorb" class="models.Warenkorb" scope="session"/>
 
-<table>
-	<% for(Product prod: warenkorb.getWarenkorbProdukt()){ %>
-	<tr>
-		<td><%=prod.getName() %></td>
-		<td> <input id="delete" type="button" name="delete" value="delete" ></td>
-		<td> <input id="bestellen" type="button" name="bestellen" value="bestellen" ></td>
-	</tr>
-	<%} %>
-</table>
+<%
+	if(warenkorb.getWarenkorbProdukt().isEmpty()){
+		out.println("<h1>"+"Warenkorb ist leer"+"</h1>");
+	}
+	else{
+		out.println("<h1>"+ warenkorb.getRemovedMessage()+"</h1>");
+	}
+
+ %>
+ <% out.println("<h1>"+ warenkorb.getBestellungsMessage()+"</h1>"); %>
+		<% for(Product prod: warenkorb.getWarenkorbProdukt().keySet()){ %>
+		<form action="./WarenkorbAppl.jsp" method="post">
+		
+				<%=prod.getName() %>
+				<%=warenkorb.getWarenkorbProdukt().get(prod)  %>
+				 <button class="button" type="submit" name="deleteProduktInWarenkorb" value="delete">delete</button>
+				 <input type="hidden" name="tobedeleted" value=<%= prod.getName() %>> 
+				<button type="submit" class="Button" name="bestellen" value="bestellen">Bestellen</button>
+		</form>
+			<%} %>
+
 
 </body>
 </html>
