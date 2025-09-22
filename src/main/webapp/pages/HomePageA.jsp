@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/HomePageA.css" />
 </head>
 <body>
+<jsp:useBean id="user" class="models.User" scope="session"/>
 
 <header>
     <img src="../images/logo.jpg"id="logo" >

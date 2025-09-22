@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="dao.DbConnection" %>
+<%@ page import="models.User" %>
 <%@ page import="java.sql.Connection"%>
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
@@ -9,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<jsp:useBean id="user" class="models.User" scope="session"/>
 <%
 	String username = request.getParameter("nachname");
 	String password = request.getParameter("password");
@@ -26,7 +27,9 @@
 		out.println("<p>user does not exist. username or password is wrong </p>");
 	}
 	else{
-		response.sendRedirect("../HomePage.jsp");
+		user.setName(username);
+		user.setPassword(password);
+		response.sendRedirect("../HomePageA.jsp");
 	}
 	
 	

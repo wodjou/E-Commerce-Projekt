@@ -16,6 +16,7 @@ public class Warenkorb {
 	private Map<Product, Integer> warenkorbProdukt;
 	private String removedMessage = "";
 	private String bestellungsMessage ="";
+	private String username;
 
 	public Warenkorb() {
 		warenkorbProdukt = new HashMap<>();
@@ -70,6 +71,12 @@ public class Warenkorb {
 	
 	
 	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	public String getBestellungsMessage() {
 		return bestellungsMessage;
 	}
@@ -77,10 +84,11 @@ public class Warenkorb {
 		this.bestellungsMessage = bestellungsMessage;
 	}
 	public boolean productBestellen(Product product) throws SQLException {
-		
 		Connection conn = new DbConnection().etablishConnection();
 		String query = "INSERT INTO orders (productname, menge, username, gesamtpreis) VALUES (?, ?, ?, ?)";
+		String insertToPayments = "INSERT INTO payments (username, gesamtpreis) VALUES (?, ?)"; 
 		PreparedStatement preparedStatement = conn.prepareStatement(query);
+		PreparedStatement prepStatPayments = conn.prepareStatement(insertToPayments);
 		preparedStatement.setString(1, product.getName());
 		int value= -500;
 		for(Entry<Product, Integer> entry: warenkorbProdukt.entrySet()) {
@@ -96,8 +104,11 @@ public class Warenkorb {
 		preparedStatement.setInt(2, value);
 		preparedStatement.setString(3, "testUser");
 		preparedStatement.setInt(4, value*1000);
+		prepStatPayments.setString(1, this.username);
+		prepStatPayments.setInt(2, value*1000);
 		
 		preparedStatement.executeUpdate();
+		prepStatPayments.executeUpdate();
 		System.out.println("Bestellung wurde gespeichert");
 		return false;
 	}

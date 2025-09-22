@@ -1,4 +1,5 @@
 <%@ page import="models.Product" %>
+
 <%@ page import="models.Warenkorb" %>
 <%@ page import="dao.ProductDao" %>
 <%@ page import="java.util.HashMap" %>
@@ -50,6 +51,7 @@
 </head>
 <body>
 <jsp:useBean id="warenkorb" class="models.Warenkorb" scope="session"/>
+<jsp:useBean id="user" class="models.User" scope="session"/>
  <%@include file="/components/header.jsp" %>
 <h1>Unsere Betten</h1>
 <% 

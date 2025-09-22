@@ -11,6 +11,7 @@
 </head>
 <body>
 <jsp:useBean id="warenkorb" class="models.Warenkorb" scope="session"/>
+<jsp:useBean id="user" class="models.User" scope="session"/>
 
 
 <% 
@@ -54,6 +55,7 @@ if(deletedProduktInWarenkorb != null){
 }
 if(request.getParameter("bestellen") != null){
 	String toBeDeleted = request.getParameter("tobedeleted");
+	warenkorb.setUsername(user.getName());
 	warenkorb.productBestellen(new Product(toBeDeleted));
 	response.sendRedirect("WarenkorbView.jsp");
 }
