@@ -16,7 +16,7 @@
 <body>
  <%@include file="/components/header.jsp" %>
 
-<form action="controller/LoginController.jsp" method="post">
+<form action="pages/controller/LoginController.jsp" method="post">
   <h2 class="heading1">Einloggen/Registrieren</h2>
   <main class="page-wrapper">
     <section class="login-container">

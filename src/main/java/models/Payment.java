@@ -1,13 +1,17 @@
 package models;
 
+import java.time.LocalDate;
+
 public class Payment {
 	
 	private String userName;
 	private int gesamtPreis;
+	private LocalDate date;
 	
-	public Payment(String userName, int gesamtPreis) {
+	public Payment(String userName, int gesamtPreis, LocalDate date) {
 		this.userName = userName;
 		this.gesamtPreis = gesamtPreis;
+		this.date = date;
 	}
 
 	public String getUserName() {
@@ -25,6 +29,15 @@ public class Payment {
 	public void setGesamtPreis(int gesamtPreis) {
 		this.gesamtPreis = gesamtPreis;
 	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	
 	
 	
 	

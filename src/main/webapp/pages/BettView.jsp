@@ -50,7 +50,6 @@
   </style>
 </head>
 <body>
-<jsp:useBean id="warenkorb" class="models.Warenkorb" scope="session"/>
 <jsp:useBean id="user" class="models.User" scope="session"/>
  <%@include file="/components/header.jsp" %>
 <h1>Unsere Betten</h1>

@@ -49,6 +49,13 @@
 <%@include file="/components/header.jsp" %>
 <h1>Unsere Tische</h1>
 
+<% 
+if(!warenkorb.getWarenkorbProdukt().isEmpty()){
+	out.println("<h1>"+ warenkorb.getInfoMessage()+"</h1>");
+}
+ 
+ 
+ %>
  <div id="first" style="margin-left: 200px">         
  <div>
  <form action="./WarenkorbAppl.jsp" method="post">
@@ -63,9 +70,9 @@
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="table1" value="sofa1">
+			<input type="hidden" name="table1" value="table1">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
-			<label style="color: yellow">Menge: </label> <input type="number" name="menge1" value="" placeholder="Menge eingeben"> 
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengetable1" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
 			<button class="button" type="submit">kaufen</button>
 		</form>
@@ -84,9 +91,9 @@
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="table1" value="table1">
+			<input type="hidden" name="table2" value="table2">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
-			<label style="color: yellow">Menge: </label> <input type="number" name="menge2" value="" placeholder="Menge eingeben"> 
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengetable2" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
 			<button class="button" type="submit">kaufen</button>
 		</form>
@@ -107,9 +114,9 @@
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="table3" value="sofa3">
+			<input type="hidden" name="table3" value="table3">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
-			<label style="color: yellow">Menge: </label> <input type="number" name="menge3" value="" placeholder="Menge eingeben"> 
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengetable3" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
 			<button class="button" type="submit">kaufen</button>
 		</form>
@@ -128,9 +135,9 @@
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="table4" value="sofa4">
+			<input type="hidden" name="table4" value="table4">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
-			<label style="color: yellow">Menge: </label> <input type="number" name="menge4" value="" placeholder="Menge eingeben"> 
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengetable4" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
 			<button class="button" type="submit">kaufen</button>
 		</form>
@@ -153,7 +160,7 @@
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
 			<input type="hidden" name="table5" value="table5">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
-			<label style="color: yellow">Menge: </label> <input type="number" name="menge5" value="" placeholder="Menge eingeben"> 
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengetable5" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
 			<button class="button" type="submit">kaufen</button>
 		</form>
@@ -174,7 +181,7 @@
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
 			<input type="hidden" name="table6" value="table6">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
-			<label style="color: yellow">Menge: </label> <input type="number" name="menge6" value="" placeholder="Menge eingeben"> 
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengetable6" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
 			<button class="button" type="submit">kaufen</button>
 		</form>

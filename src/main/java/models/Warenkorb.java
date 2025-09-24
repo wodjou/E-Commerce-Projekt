@@ -3,6 +3,7 @@ package models;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -86,7 +87,7 @@ public class Warenkorb {
 	public boolean productBestellen(Product product) throws SQLException {
 		Connection conn = new DbConnection().etablishConnection();
 		String query = "INSERT INTO orders (productname, menge, username, gesamtpreis) VALUES (?, ?, ?, ?)";
-		String insertToPayments = "INSERT INTO payments (username, gesamtpreis) VALUES (?, ?)"; 
+		String insertToPayments = "INSERT INTO payments (username, gesamtpreis,zahlungsdatum) VALUES (?, ?,?)"; 
 		PreparedStatement preparedStatement = conn.prepareStatement(query);
 		PreparedStatement prepStatPayments = conn.prepareStatement(insertToPayments);
 		preparedStatement.setString(1, product.getName());
@@ -102,11 +103,14 @@ public class Warenkorb {
 			}
 		}
 		preparedStatement.setInt(2, value);
-		preparedStatement.setString(3, "testUser");
+		if(this.username == null) {
+			this.username = "Gast";
+		}
+		preparedStatement.setString(3, this.username);
 		preparedStatement.setInt(4, value*1000);
 		prepStatPayments.setString(1, this.username);
 		prepStatPayments.setInt(2, value*1000);
-		
+		prepStatPayments.setObject(3, LocalDate.now());
 		preparedStatement.executeUpdate();
 		prepStatPayments.executeUpdate();
 		System.out.println("Bestellung wurde gespeichert");

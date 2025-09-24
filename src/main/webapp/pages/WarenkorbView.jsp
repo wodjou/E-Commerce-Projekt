@@ -42,10 +42,17 @@
  %>
  <% out.println("<h1>"+ warenkorb.getBestellungsMessage()+"</h1>"); %>
  <div class="table">
-		<% for(Product prod: warenkorb.getWarenkorbProdukt().keySet()){ %>
+		<% for(Product prod: warenkorb.getWarenkorbProdukt().keySet()){ String bildFormat ="";%>
+			<% if(prod.getName().equals("Bett1") || prod.getName().equals("Bett2")){
+				bildFormat=".png";
+			}
+			else{
+				bildFormat = ".jpeg";
+			}
+				%>
 		<form action="./WarenkorbAppl.jsp" method="post">
 			<div class="row">
-				<div class="cell"><img src= <%= "../images/"+ prod.getName()+ ".png"  %> style="width:30px; height: 30px" />
+				<div class="cell"><img src= <%= "../images/"+ prod.getName()+ bildFormat  %> style="width:30px; height: 30px" />
 				<%=prod.getName() %></div>
 				<div class="cell"><%=warenkorb.getWarenkorbProdukt().get(prod)  %> </div>
 				
