@@ -10,6 +10,36 @@
   <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/utilities.css">
   <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/login.css">
   <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/sofa.css">
+   <style type="text/css">
+	  #first {
+	  display: flex;
+	  gap: 15px; /* optionaler Abstand zwischen den Divs */
+	}
+	
+	#first > div {
+	  flex: 1;           /* beide Divs gleich breit */
+	  max-width: 50%;    /* verhindern, dass eins zu groß wird */
+	}
+	
+	 #second {
+	  display: flex;
+	  gap: 15px; /* optionaler Abstand zwischen den Divs */
+	}
+	
+	#second > div {
+	  flex: 1;           /* beide Divs gleich breit */
+	  max-width: 50%;    /* verhindern, dass eins zu groß wird */
+	}
+	 #third {
+	  display: flex;
+	  gap: 15px; /* optionaler Abstand zwischen den Divs */
+	}
+	
+	#third > div {
+	  flex: 1;           /* beide Divs gleich breit */
+	  max-width: 50%;    /* verhindern, dass eins zu groß wird */
+	}
+  </style>
 
 <title>Insert title here</title>
 </head>
@@ -20,152 +50,150 @@
  Treffen Sie ihre Wahl
  </h1>
  <br>
-  <div class="sofaImg">
-  <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/0.jpeg"
-          alt="sofa bild "   width= 150
-	height= 150>
-	<main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-      <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
-      
-          
-	<button class="button" type="submit">kaufen</button> 
+ <% 
+if(!warenkorb.getWarenkorbProdukt().isEmpty()){
+	out.println("<h1>"+ warenkorb.getInfoMessage()+"</h1>");
+}
+ 
+ 
+ %>
+ <div id="first" style="margin-left: 200px">
+	 <div>
+	 <form action="./WarenkorbAppl.jsp" method="post">
+		   <img src="<%= request.getContextPath() %>/images/Sofa1.jpeg" title="Produktdetails:
+		- Farbe: Hellrosa
+		- Material: Metall
+		- Größe: 197 × 96 × 88,5 cm (L x B x H)
+		- Geeignete Matratze: 190 cm L × 90 cm B (Matratze nicht dabei)
+		- Bodenfreiheit: 32 cm
+		- Gewicht: 12 kg
+		- Max. Belastbarkeit: 180 kg
+		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
+	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
+	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
+			<input type="hidden" name="sofa1" value="sofa1">
+			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa1" value="" placeholder="Menge eingeben"> 
+			<div>⭐⭐⭐⭐⭐</div>
+			<button class="button" type="submit">kaufen</button>
+		</form>
+	</div>
 	
-	<br>
-           <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/1.jpeg"
-          alt="sofa bild "   width= 150
-	height= 150>
-	<main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-          <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
+	<div>
+		 <form action="./WarenkorbAppl.jsp" method="post">
+		   <img src="<%= request.getContextPath() %>/images/Sofa2.jpeg" title="Produktdetails:
+		- Farbe: Hellrosa
+		- Material: Metall
+		- Größe: 197 × 96 × 88,5 cm (L x B x H)
+		- Geeignete Matratze: 190 cm L × 90 cm B (Matratze nicht dabei)
+		- Bodenfreiheit: 32 cm
+		- Gewicht: 12 kg
+		- Max. Belastbarkeit: 180 kg
+		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
+	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
+	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
+			<input type="hidden" name="sofa2" value="sofa2">
+			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa2" value="" placeholder="Menge eingeben"> 
+			<div>⭐⭐⭐⭐⭐</div>
+			<button class="button" type="submit">kaufen</button>
+		</form>
+	</div>
+</div>
+
+<div id="second" id="first" style="margin-left: 200px">
+	<div>
+		<form action="./WarenkorbAppl.jsp" method="post">
+		   <img src="<%= request.getContextPath() %>/images/Sofa3.jpeg" title="Produktdetails:
+		- Farbe: Hellrosa
+		- Material: Metall
+		- Größe: 197 × 96 × 88,5 cm (L x B x H)
+		- Geeignete Matratze: 190 cm L × 90 cm B (Matratze nicht dabei)
+		- Bodenfreiheit: 32 cm
+		- Gewicht: 12 kg
+		- Max. Belastbarkeit: 180 kg
+		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
+	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
+	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
+			<input type="hidden" name="sofa3" value="sofa3">
+			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa3" value="" placeholder="Menge eingeben"> 
+			<div>⭐⭐⭐⭐⭐</div>
+			<button class="button" type="submit">kaufen</button>
+		</form>
+	</div>
 	
-	<button class="button" type="submit">kaufen</button>
-	<br>
-           <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/2.jpeg"
-          alt="sofa bild "   width= 150
-	height= 150>
-	<main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-          <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
-	
-	<button class="button" type="submit">kaufen</button>
-	
-	<br>
-           <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/3.jpeg"
-          alt="sofa bild "   width= 150
-	height= 150> 
-	
-	<main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-          <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
-          
-          
-          <button class="button" type="submit">kaufen</button>
-	
-	<br>
-           <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/4.jpeg"
-          alt="sofa bild "   width= 150
-	height= 150><main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-          <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
-          
-          
-          
-          <button class="button" type="submit">kaufen</button>
-	
-	<br>
-           <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/5.jpeg"
-          alt="sofa bild "  width= 150
-	height= 150>
-	<main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-          <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
-	
-	<button class="button" type="submit">kaufen</button>
-	
-	<br>
-           <img
-          class="sofa"
-          src="<%= request.getContextPath() %>/images/6.jpeg"
-          alt="sofa bild "   width= 150
-	height= 150>
-	<main class="product-card-body">
-            <h3>sofa de luxe</h3>
-            <span>1000 €</span>
-            <div>⭐⭐⭐⭐⭐</div>
-          </main>
-          <div class="description"> 
-      <h3> Artikel beschreibung </h3><br>
-      <h4> Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
-      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
-       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen.</h4>
-      </div>
-	
-	<button class="button" type="submit">kaufen</button>
-	
-          
-      </div>  
-      </div>  
+	<div>
+	  
+	          <form action="./WarenkorbAppl.jsp" method="post">
+		   <img src="<%= request.getContextPath() %>/images/Sofa4.jpeg" title="Produktdetails:
+		- Farbe: Hellrosa
+		- Material: Metall
+		- Größe: 197 × 96 × 88,5 cm (L x B x H)
+		- Geeignete Matratze: 190 cm L × 90 cm B (Matratze nicht dabei)
+		- Bodenfreiheit: 32 cm
+		- Gewicht: 12 kg
+		- Max. Belastbarkeit: 180 kg
+		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
+	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
+	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
+			<input type="hidden" name="sofa4" value="sofa4">
+			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa4" value="" placeholder="Menge eingeben"> 
+			<div>⭐⭐⭐⭐⭐</div>
+			<button class="button" type="submit">kaufen</button>
+		</form>
+	 </div>
+ </div>
+ 
+ <div id="third" id="first" style="margin-left: 200px">
+	 <div>       
+	         
+	         <form action="./WarenkorbAppl.jsp" method="post">
+		   <img src="<%= request.getContextPath() %>/images/Sofa5.jpeg" title="Produktdetails:
+		- Farbe: Hellrosa
+		- Material: Metall
+		- Größe: 197 × 96 × 88,5 cm (L x B x H)
+		- Geeignete Matratze: 190 cm L × 90 cm B (Matratze nicht dabei)
+		- Bodenfreiheit: 32 cm
+		- Gewicht: 12 kg
+		- Max. Belastbarkeit: 180 kg
+		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
+	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
+	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
+			<input type="hidden" name="sofa5" value="sofa1">
+			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa5" value="" placeholder="Menge eingeben"> 
+			<div>⭐⭐⭐⭐⭐</div>
+			<button class="button" type="submit">kaufen</button>
+		</form>
+	</div>
+		
+	           
+	          
+	          
+	 <div>        
+	 <form action="./WarenkorbAppl.jsp" method="post">
+		   <img src="<%= request.getContextPath() %>/images/Sofa6.jpeg" title="Produktdetails:
+		- Farbe: Hellrosa
+		- Material: Metall
+		- Größe: 197 × 96 × 88,5 cm (L x B x H)
+		- Geeignete Matratze: 190 cm L × 90 cm B (Matratze nicht dabei)
+		- Bodenfreiheit: 32 cm
+		- Gewicht: 12 kg
+		- Max. Belastbarkeit: 180 kg
+		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
+	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
+	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
+			<input type="hidden" name="sofa6" value="sofa6">
+			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
+			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa6" value="" placeholder="Menge eingeben"> 
+			<div>⭐⭐⭐⭐⭐</div>
+			<button class="button" type="submit">kaufen</button>
+		</form>
+	</div> 
+</div>    
+       
           
        <%@ include file="/components/footer.jsp" %>   
 </body>

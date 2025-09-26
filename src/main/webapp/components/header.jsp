@@ -1,6 +1,7 @@
+<%@ page import="models.Warenkorb" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<jsp:useBean id="warenkorb" class="models.Warenkorb" scope="session"/>
 <header class="navbar">
   <main class="header-content-wrapper">
     <span class="logo">🛍️</span>
@@ -11,7 +12,7 @@
           <a class="nav-menu-item-link" href="#best">Beste Produkte</a>
         </li>
         <li class="nav-menu-item">
-          <a class="nav-menu-item-link" href="#">Sales</a>
+          <a class="nav-menu-item-link" href="./Rechnungswesen.jsp">Sales</a>
         </li>
         <li class="nav-menu-item">
           <a class="nav-menu-item-link" href="#">Katalog</a>
@@ -25,9 +26,17 @@
         <button class="button" type="submit">Suche <span class="icon">🔎</span></button>
       </form>
       <span>
-        <a href="#">Warenkorb <span class="icon">🛒</span></a>
+      	<span> <%= warenkorb.getWarenkorbProdukt().size() %></span>
+        <a href="./WarenkorbView.jsp">Warenkorb<span class="icon">🛒 <%= warenkorb.getWarenkorbProdukt().size() %></span></a>
       </span>
     </div>
   </main>
 </header>
+
+ <body>
+
+
+</body>
+
+
  

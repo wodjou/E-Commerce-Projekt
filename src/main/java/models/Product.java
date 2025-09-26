@@ -14,6 +14,9 @@ public class Product {
 	
 	public Product() {
 	}
+	public Product(String productName) {
+		this.name = productName;
+	}
 	
 
 	public Product(int id, String name, double price, String description) {
