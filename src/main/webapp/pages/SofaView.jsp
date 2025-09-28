@@ -71,7 +71,7 @@ if(!warenkorb.getWarenkorbProdukt().isEmpty()){
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="sofa1" value="sofa1">
+			<input type="hidden" name="sofa1" value="Sofa1">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
 			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa1" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
@@ -92,7 +92,7 @@ if(!warenkorb.getWarenkorbProdukt().isEmpty()){
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="sofa2" value="sofa2">
+			<input type="hidden" name="sofa2" value="Sofa2">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
 			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa2" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
@@ -115,7 +115,7 @@ if(!warenkorb.getWarenkorbProdukt().isEmpty()){
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="sofa3" value="sofa3">
+			<input type="hidden" name="sofa3" value="Sofa3">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
 			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa3" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
@@ -137,7 +137,7 @@ if(!warenkorb.getWarenkorbProdukt().isEmpty()){
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="sofa4" value="sofa4">
+			<input type="hidden" name="sofa4" value="Sofa4">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
 			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa4" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
@@ -161,7 +161,7 @@ if(!warenkorb.getWarenkorbProdukt().isEmpty()){
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="sofa5" value="sofa1">
+			<input type="hidden" name="sofa5" value="Sofa5">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
 			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa5" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>
@@ -185,7 +185,7 @@ if(!warenkorb.getWarenkorbProdukt().isEmpty()){
 		- Beschreibung: Ein elegantes Polsterprogramm bietet dieses 3-Sitzer Sofa von COTTA mit Rückenverstellung. 
 	      Im modernen Design gehalten, fügt es sich in verschiedenste Wohnkonzepte ein.
 	       Da die frei im Raum stellbare Couch in mehreren Farben erhältlich ist, kannst du sie passend zu deinem bestehenden Interieur bestellen."/> <br>
-			<input type="hidden" name="sofa6" value="sofa6">
+			<input type="hidden" name="sofa6" value="Sofa6">
 			<label style="color: yellow">Preis: </label> <span style="color: yellow">1000 €</span><br>
 			<label style="color: yellow">Menge: </label> <input type="number" name="mengesofa6" value="" placeholder="Menge eingeben"> 
 			<div>⭐⭐⭐⭐⭐</div>

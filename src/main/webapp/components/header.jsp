@@ -9,7 +9,7 @@
     <nav class="nav-menu-container">
       <ul class="nav-menu">
         <li class="nav-menu-item ">
-          <a class="nav-menu-item-link" href="#best">Beste Produkte</a>
+          <a class="nav-menu-item-link" href="./BestProduct.jsp">Beste Produkte</a>
         </li>
         <li class="nav-menu-item">
           <a class="nav-menu-item-link" href="./Rechnungswesen.jsp">Sales</a>
@@ -26,7 +26,6 @@
         <button class="button" type="submit">Suche <span class="icon">🔎</span></button>
       </form>
       <span>
-      	<span> <%= warenkorb.getWarenkorbProdukt().size() %></span>
         <a href="./WarenkorbView.jsp">Warenkorb<span class="icon">🛒 <%= warenkorb.getWarenkorbProdukt().size() %></span></a>
       </span>
     </div>

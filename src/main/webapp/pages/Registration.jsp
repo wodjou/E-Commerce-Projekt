@@ -16,7 +16,7 @@
       <img src="<%= request.getContextPath() %>/images/RegistrationBild.jpg" alt="Woman with tablet" />
     </div>
     <div class="right-panel">
-      <form class="signup-form" action="controller/RegistrationController.jsp" method="post">
+      <form class="signup-form" action="controller/RegistrationAppl.jsp" method="post">
         <h2>Registration</h2>
 
         <label for="fullname">name</label>

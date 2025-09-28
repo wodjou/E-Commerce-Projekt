@@ -6,7 +6,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import models.Katalog;
 import models.Product;
 
 public class ProductDao {

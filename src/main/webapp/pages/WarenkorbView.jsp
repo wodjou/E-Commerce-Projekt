@@ -26,6 +26,30 @@
   padding: 8px;
 }
 
+.orderButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: rgb(69, 109, 196);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.deleteButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 0.3rem;
+  background-color:	#8B0000;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
@@ -56,9 +80,9 @@
 				<%=prod.getName() %></div>
 				<div class="cell"><%=warenkorb.getWarenkorbProdukt().get(prod)  %> </div>
 				
-				 <div class="cell"><button class="button" type="submit" name="deleteProduktInWarenkorb" value="delete">delete</button></div>
+				 <div class="cell"><button class="deleteButton" type="submit" name="deleteProduktInWarenkorb" value="delete">Löschen</button></div>
 				 <input type="hidden" name="tobedeleted" value=<%= prod.getName() %>> 
-				<div class="cell"><button type="submit" class="Button" name="bestellen" value="bestellen">Bestellen</button></div>
+				<div class="cell"><button type="submit" class="orderButton" name="bestellen" value="bestellen">Bestellen</button></div>
 			
 		</div>
 		</form>
